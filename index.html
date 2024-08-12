@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo" />
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+  <div id="portfolio">
+    <div class="container">
+      <div class="sub-title">My Work</div>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/aplikacija.png">
+          <div class="layer" onclick="window.open('design.html', '_blank');">
+            <h3>Redizajn aplikacije</h3>
+            <p>Fortenova natječaj</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/letak_w.jpg">
+          <div class="layer" onclick="window.open('design2.html', '_blank');">
+            <h3>Letak</h3>
+            <p>Wingo Tehnologies stolovi</p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/flyer_z.jpg">
+          <div class="layer" onclick="window.open('design3.html', '_blank');">
+            <h3>Poster</h3>
+            <p>Summer School of Entropy PMF</p>
+          </div>
+        </div>
+        <div class="work">
+            <img src="images/logo_a_manje.jpg">
+            <div class="layer" onclick="window.open('design4.html', '_blank');">
+              <h3>Logo</h3>
+              <p>Projekt za faks</p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/čokus1.jpg">
+            <div class="layer" onclick="window.open('design5.html', '_blank');">
+              <h3>Ambalaža</h3>
+              <p>Projekt za faks</p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/istra5.jpg">
+            <div class="layer" onclick="window.open('design6.html', '_blank');">
+              <h3>Majica</h3>
+              <p>Bioaromatica</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/abstr.png" alt="" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p></p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Vještine</p>
+            <p class="tab-links" onclick="opentab('experience')">Iskustvo</p>
+            <p class="tab-links" onclick="opentab('education')">Obrazovanje</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Dizajn</span><br />Adobe Photoshop, Adobe Lightroom, Adobe Illustrator, Adobe Indesign, Adobe After Effects, Adobe Premiere Pro</li>
+              <li><span>Fotografija</span><br />Fotografija, Photo Editing, Video Editing</li>
+              <li><span>UI UX Dizajn</span><br />Figma, HTML/CSS</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>1.5.2024. - 13.7. 2024.</span><br />Aromatica, Dizajn</li>
+              <li><span>3.4.2024.</span><br />Fortenova natječaj, Prvo mjesto, Tim Hefest, Redizajn aplikacije trgovine Konzum</li>
+              <li><span>8.8. 2022. - 7.9. 2022.</span><br />Studentska praksa, Wingo Technologies, Dizajn letka</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2022. - danas</span><br />Sveučilište u Zagrebu, Grafički fakultet, Dizajn grafičkih proizvoda, diplomski studij</li>
+              <li><span>2019. - 2022.</span><br />Sveučilište u Zagrebu, Grafički fakultet, Dizajn grafičkih proizvoda, preddiplomski studij, Sveučilišni prvostupnik (baccalaureus) inženjer grafičke tehnologije</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact</h1>
+          <p>pavica.jagnjic7@gmail.com</p>
+          <p>+385 916180680</p>
+          <a href="images/CV.pdf" download class="btn btn2">Download CV</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright © Kevin. Made by Easy Tutorials.</p>
+    </div>
+  </div>
+
+  <script>
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+      for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+      sidemenu.style.right = "0";
+    }
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+</body>
+</html>
